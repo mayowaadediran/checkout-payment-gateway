@@ -1,10 +1,15 @@
 {
-  "name": "mern-setup",
+  "name": "checkout-payment-gateway",
   "version": "1.0.0",
-  "description": "Mern Starter",
-  "main": "index.js",
+  "description": "Checkout with different payment gateway",
+  "main": "./build/index.js",
   "author": "Mayowa Adediran",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
+    "start": "NODE_ENV=production node ./dist/server.generated.js"
+  },
    "devDependencies": {
     "@babel/core": "7.9.0",
     "@babel/preset-env": "7.9.0",
